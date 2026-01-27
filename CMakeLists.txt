@@ -32,7 +32,7 @@ install(TARGETS ${PROJECT_NAME}
 
 # Install header files
 install(DIRECTORY include/
-    DESTINATION include
+    DESTINATION include/${PROJECT_NAME}
 )
 
 # Install CMake config files for proper integration
