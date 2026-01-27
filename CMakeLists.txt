@@ -12,7 +12,7 @@ endif()
 project ("CrossplatformMocks")
 
 # Add source to this project's executable.
-add_library (CrossplatformMocks INTERFACE)
+add_library (${PROJECT_NAME} INTERFACE)
 
 # Specify include directories for the interface library
 target_include_directories(CrossplatformMocks INTERFACE 
@@ -21,5 +21,22 @@ target_include_directories(CrossplatformMocks INTERFACE
 )
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET CrossplatformMocks PROPERTY CXX_STANDARD 20)
+  set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 endif()
+
+# Install targets
+install(TARGETS ${PROJECT_NAME}
+    EXPORT CrossplatformMocksTargets
+    INCLUDES DESTINATION include
+)
+
+# Install header files
+install(DIRECTORY include/
+    DESTINATION include
+)
+
+# Install CMake config files for proper integration
+install(EXPORT CrossplatformMocksTargets
+    FILE CrossplatformMocksTargets.cmake
+    DESTINATION share/${PROJECT_NAME}
+)
