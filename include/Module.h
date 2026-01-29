@@ -5,6 +5,5 @@
 typedef HMODULE LibraryHandle;
 #else
 #include <dlfcn.h>
-typedef void* LibraryHandle;
-typedef int64_t __time64_t;
+#include "Typedef.h"
 #endif
