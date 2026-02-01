@@ -2,6 +2,7 @@
 
 // Some types are copied from https://github.com/reactos/reactos
 #ifndef _WIN32
+#include <cstdint>
 typedef unsigned char byte;
 typedef unsigned int UINT;
 typedef int64_t __time64_t;
