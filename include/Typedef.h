@@ -14,6 +14,7 @@ typedef const char* LPCCH;
 typedef wchar_t* LPWSTR;
 typedef const wchar_t* LPCWCH;
 typedef unsigned long DWORD;
+typedef unsigned short WORD;
 typedef bool* LPBOOL;
 typedef uint64_t UINT_PTR;
 typedef UINT_PTR WPARAM;
