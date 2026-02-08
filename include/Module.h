@@ -14,7 +14,7 @@ DWORD GetLastError()
 #endif
 
 template<typename T>
-T LibrariesManager::GetFunctionAddress(LibraryHandle handle, const char* functionName)
+T GetFunctionAddress(LibraryHandle handle, const char* functionName)
 {
 #ifdef _WIN32
     return reinterpret_cast<T>(::GetProcAddress(handle, functionName));
