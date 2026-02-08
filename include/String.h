@@ -5,7 +5,7 @@
 #include <cstring>
 #include <cerrno>
 
-errno_t strcpy_s(char* destination, size_t sizeInBytes, char const* source)
+inline errno_t strcpy_s(char* destination, size_t sizeInBytes, char const* source)
 {
     if (destination == nullptr || source == nullptr || sizeInBytes == 0)
     {

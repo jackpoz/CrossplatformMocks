@@ -5,7 +5,7 @@
 #include <cstdio>
 #include <cerrno>
 
-errno_t fopen_s(FILE** file, char const* fileName, char const* mode)
+inline errno_t fopen_s(FILE** file, char const* fileName, char const* mode)
 {
     if (file == nullptr || fileName == nullptr || mode == nullptr)
     {

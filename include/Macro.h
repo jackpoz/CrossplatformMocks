@@ -6,4 +6,5 @@
 #else
 #define CROSSPLATFORM_MOCKS_EXPORT extern "C" __attribute__((visibility("default")))
 #define CROSSPLATFORM_MOCKS_IMPORT
+#define S_OK (0L)
 #endif

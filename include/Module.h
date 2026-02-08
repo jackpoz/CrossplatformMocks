@@ -7,7 +7,7 @@ typedef HMODULE LibraryHandle;
 #include <dlfcn.h>
 #include "Typedef.h"
 
-DWORD GetLastError()
+inline DWORD GetLastError()
 {
     return -1;
 }
