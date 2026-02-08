@@ -23,4 +23,5 @@ typedef int64_t INT_PTR, LONG_PTR, *PLONG_PTR;
 typedef LONG_PTR LPARAM;
 typedef uint64_t ULONG_PTR, *PULONG_PTR;
 typedef int errno_t;
+typedef void* LPVOID;
 #endif
